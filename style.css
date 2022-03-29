@@ -1,0 +1,235 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+:root {
+  --main-gradient: linear-gradient(
+    90deg,
+    hsl(293, 100%, 63%),
+    hsl(264, 100%, 61%)
+  );
+  --white: hsl(0, 0%, 100%);
+  --sub-heading: hsl(276, 100%, 81%);
+  --app-background: hsl(270, 20%, 96%);
+  --chat-on-the-left: hsl(276, 55%, 52%);
+  --chat-on-the-right: hsl(271, 15%, 43%);
+  --placeholder-text: hsl(206, 6%, 79%);
+  --submit-button-background: hsl(271, 36%, 24%);
+  --radio-button-outline: hsl(289, 100%, 72%);
+  --phone-border-r: 2rem;
+  --main-heading: hsl(271, 36%, 24%);
+  --paragraph: hsl(270, 7%, 64%);
+}
+
+/************* General Styles **************/
+body {
+  margin: 0;
+  padding: 0.1px; /**** collapsion margin *****/
+  position: relative;
+  font-family: "Rubik", sans-serif;
+  background-color: var(--app-background);
+}
+img {
+  max-width: 100%;
+}
+p {
+  margin: 0;
+}
+/****** background style ******/
+
+body::before {
+  content: "";
+  position: absolute;
+  width: 80vw;
+  height: 60vh;
+  top: 0;
+  left: -10rem;
+  border-radius: 0 0 50% 50%;
+  background-image: var(--main-gradient);
+  z-index: -1;
+}
+
+/*********** phone styles ********/
+
+.phone {
+  width: 18.5rem;
+  margin-top: 8vh;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 4rem;
+  padding: 0.6rem;
+  padding-bottom: 0.9rem;
+  border-radius: var(--phone-border-r);
+  box-shadow: 2px 5px 30px var(--chat-on-the-right);
+  background-color: white;
+}
+
+/********* header styles ******/
+.phone__header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 1.8rem 0.5rem 0.5rem;
+  border-radius: 1.7rem 1.7rem 0.6rem 0.6rem;
+  background-image: var(--main-gradient);
+}
+.phone__header::after {
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 40%;
+  top: -8px;
+  right: 20%;
+  left: 20%;
+  border-radius: 0 0 1rem 1rem;
+  background-color: var(--white);
+}
+.phone__profile-pic {
+  width: 2.2rem;
+  border-radius: 50%;
+  border: 2px solid var(--white);
+}
+.material-icons {
+  color: var(--white);
+}
+.material-icons--options {
+  margin-left: auto;
+  writing-mode: sideways-rl;
+}
+.phone__header__profile-info {
+  margin-left: 0.5rem;
+}
+.phone__header__name {
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: var(--white);
+}
+.phone__header__status {
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: var(--sub-heading);
+}
+
+/***************** screen phone style **********/
+.phone__screen {
+  padding: 0.9rem 0.5rem;
+  border-radius: var(--phone-border-r);
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  background-color: var(--app-background);
+}
+.phone__message {
+  width: 70%;
+  padding: 0.5rem;
+  margin-bottom: 0.7rem;
+  border-radius: 15px 15px 15px 5px;
+  color: var(--chat-on-the-left);
+  background-color: var(--placeholder-text);
+}
+.phone__message p {
+  font-size: 0.7rem;
+}
+.phone__message-pictures {
+  display: flex;
+  justify-content: end;
+  gap: 0.6rem;
+  margin-top: 1.2rem;
+  margin-bottom: 0.7rem;
+}
+.phone__img {
+  width: 20%;
+  border-radius: 0.8rem;
+}
+.phone__message--r {
+  margin-left: auto;
+  width: 65%;
+  border-radius: 15px 15px 5px 15px;
+  color: var(--chat-on-the-right);
+  background-color: var(--white);
+}
+.phone__message--short {
+  width: fit-content;
+  margin-bottom: 1.2rem;
+}
+.material-icons-circle {
+  color: var(--radio-button-outline);
+}
+.phone__message--choise {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-right: 1rem;
+  color: var(--white);
+  background-image: var(--main-gradient);
+}
+.phone__message-price {
+  margin-left: auto;
+}
+.phone__input-text {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 1.3rem;
+  border-radius: 2rem;
+  background-color: var(--white);
+}
+.phone__input-text p {
+  color: var(--placeholder-text);
+}
+
+.material-icons-send {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 1.5px;
+  right: 5px;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: var(--submit-button-background);
+}
+
+/***************** Main heading styles *************/
+
+.title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: var(--main-heading);
+}
+.description__pharagraph {
+  padding: 0 2rem;
+  text-align: center;
+  line-height: 1.5;
+  margin-bottom: 3rem;
+  color: var(--paragraph);
+}
+
+/************** Responsive *****/
+
+@media screen and (min-width: 1200px) {
+  body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+  .phone {
+    margin-right: 10%;
+  }
+  .title,
+  .description__pharagraph {
+    width: 60%;
+    text-align: left;
+    padding: 0;
+  }
+
+  body::before {
+    width: 40vw;
+    left: -10rem;
+    border-radius: 0 0 50% 50%;
+  }
+}
