@@ -121,7 +121,8 @@ body::before {
   background-color: var(--app-background);
 }
 .phone__message {
-  width: 70%;
+  width: max-content;
+  max-width: 18ch;
   padding: 0.5rem;
   margin-bottom: 0.7rem;
   border-radius: 15px 15px 15px 5px;
@@ -144,20 +145,18 @@ body::before {
 }
 .phone__message--r {
   margin-left: auto;
-  width: 65%;
   border-radius: 15px 15px 5px 15px;
   color: var(--chat-on-the-right);
   background-color: var(--white);
 }
 .phone__message--short {
-  width: fit-content;
   margin-bottom: 1.2rem;
 }
 .material-icons-circle {
   color: var(--radio-button-outline);
 }
 .phone__message--choise {
-  width: 80%;
+  max-width: 100%;
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -195,7 +194,7 @@ body::before {
 
 /***************** Main heading styles *************/
 
-.title {
+.description__title {
   text-align: center;
   font-size: 2.5rem;
   font-weight: 500;
@@ -207,6 +206,17 @@ body::before {
   line-height: 1.5;
   margin-bottom: 3rem;
   color: var(--paragraph);
+}
+
+
+/**************** footer ************/
+.attribution{
+  grid-column: span 2;
+  text-align: center;
+  color: var(--paragraph);
+}
+.attribution a{
+  color: var(--main-heading);
 }
 
 /************** Responsive *****/
