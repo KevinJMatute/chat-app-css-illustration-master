@@ -230,7 +230,7 @@ body::before {
   .phone {
     margin-right: 10%;
   }
-  .title,
+  .description__title,
   .description__pharagraph {
     width: 60%;
     text-align: left;
