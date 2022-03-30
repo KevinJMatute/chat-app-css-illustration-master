@@ -42,6 +42,8 @@ Users should be able to:
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
+- making shapes like chevrons and dots using ::before and ::after pseudo elements
+moving right chat messages to right using display: flex;, flex-direction: column; and align-items: flex-end;
 
 
 

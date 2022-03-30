@@ -208,14 +208,13 @@ body::before {
   color: var(--paragraph);
 }
 
-
 /**************** footer ************/
-.attribution{
+.attribution {
   grid-column: span 2;
   text-align: center;
   color: var(--paragraph);
 }
-.attribution a{
+.attribution a {
   color: var(--main-heading);
 }
 
@@ -239,7 +238,19 @@ body::before {
 
   body::before {
     width: 40vw;
+    height: 90%;
     left: -10rem;
     border-radius: 0 0 50% 50%;
+  }
+  body::after {
+    content: "";
+    position: absolute;
+    width: 35vw;
+    height: 80%;
+    bottom: 0;
+    right: -10%;
+    border-radius: 50% 50% 0% 0%;
+    background-color: var(--placeholder-text);
+    z-index: -1;
   }
 }
